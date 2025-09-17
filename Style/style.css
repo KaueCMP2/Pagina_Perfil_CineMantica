@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    margin: 0;
+}
+
+/*! Configuraçao basica do painel (SUPERIOR) */
+.painel_superior {
+    display: flex;
+    width: 100vw;
+    height: 30vh;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(22, 22, 22);
+    border-bottom: 1px solid white;
+}
+
+/*! Configuraçao basica do painel (LATERAL) */
+.painel_lateral {
+    display: flex;
+    width: 25vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+
+/*! somente para padronizar todos os tipos de listas */
+ul {
+    list-style: none; /*! Nenhum tipo de lista */
+    padding: 0; /*! Tirar o espaçamento */
+}
+
+/*! Padronizaçao do espaçamento das lista que no site remete aos usuarios */
+.listas {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/*! parte de cima do painel lateral*/
+.parte_cima {
+    display: flex;
+    flex-direction: column;
+}
+
+/*! topicos da lista (li) */
+.opcao {
+    display: flex;
+    align-items: center;
+    margin-left: 14%;
+    gap: 10px;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+/*! icones da primeira lista e mais para frente a padronizacao dos icones */
+.icon {
+    width: 40px;
+}
+
+/*? Padronizaçao do esoçamento do titulo das listas */
+.titulo_lista {
+    line-height: 1.2;
+}
+
+/*! parte de baixo do painel lateral */
+.parte_meio {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*! Esquerda da lista*/
+.lista_esquerda {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/*TODO  espaçamento bugado kkkkkkkk */
+.lista_direita {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+
+.ver_mais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.rodape {
+    width: 100vw;
+    height: 20vh;
+    background-color: rgb(22, 22, 22);
+}
