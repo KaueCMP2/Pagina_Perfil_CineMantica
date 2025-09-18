@@ -2,25 +2,56 @@ body {
     display: flex;
     flex-direction: column;
     background-color: black;
+    
     margin: 0;
 }
 
 /*! Configuraçao basica do painel (SUPERIOR) */
 .painel_superior {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 30vh;
     align-items: center;
     justify-content: space-between;
     background-color: rgb(22, 22, 22);
     border-bottom: 1px solid white;
+    position: relative;
 }
+
+.direita_painel_superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65vw;
+    height: 100%;
+}
+
+
+.barra_pesquisa {
+    position: relative;
+}
+
+.icon_pesquisa {
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    right: 96%;
+    transform: translateY(-50%);
+}
+
+#caixa_pesquisa {
+    border-radius: 10px;
+    width: 40vw;
+    height: 4vh;
+    padding-left: 0.1%;
+}
+
 
 /*! Configuraçao basica do painel (LATERAL) */
 .painel_lateral {
     display: flex;
     width: 25vw;
-    height: 100vh;
+    height: 80vh;
     flex-direction: column;
     justify-content: flex-start;
 
@@ -30,8 +61,10 @@ body {
 
 /*! somente para padronizar todos os tipos de listas */
 ul {
-    list-style: none; /*! Nenhum tipo de lista */
-    padding: 0; /*! Tirar o espaçamento */
+    list-style: none;
+    /*! Nenhum tipo de lista */
+    padding: 0;
+    /*! Tirar o espaçamento */
 }
 
 /*! Padronizaçao do espaçamento das lista que no site remete aos usuarios */
@@ -95,9 +128,17 @@ ul {
     align-items: center;
 }
 
+/* .painel_perfil {
+    background-color: aliceblue;
+    width: 75vw;
+    height: 80vh;
+    justify-content: flex-end;
+} */
 
 .rodape {
     width: 100vw;
     height: 20vh;
     background-color: rgb(22, 22, 22);
+    
+    justify-content: flex-end;
 }
