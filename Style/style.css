@@ -1,21 +1,37 @@
+@font-face {
+    font-family: Geometric-Sans;
+    src: url("/assets/fontes/GeometricaSans-Regular.ttf");
+}
+
+
 body {
     display: flex;
     flex-direction: column;
-    background-color: black;
-    
+    background-color: rgb(255, 255, 255);
+    justify-content: space-around;
     margin: 0;
+    font-family: Geometric-Sans;
 }
 
 /*! Configuraçao basica do painel (SUPERIOR) */
 .painel_superior {
     display: flex;
     width: 100%;
-    height: 30vh;
+    height: 15vh;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(0, 0, 0);
     border-bottom: 1px solid white;
     position: relative;
+}
+
+.logo {
+    width: 15vw;
+}
+
+/*! icones da primeira lista e mais para frente a padronizacao dos icones */
+.icon {
+    width: 40px;
 }
 
 .direita_painel_superior {
@@ -35,7 +51,7 @@ body {
     width: 20px;
     position: absolute;
     top: 50%;
-    right: 96%;
+    right: 95%;
     transform: translateY(-50%);
 }
 
@@ -46,16 +62,22 @@ body {
     padding-left: 0.1%;
 }
 
+.conteiner {
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+    width: 100%;
+}
 
 /*! Configuraçao basica do painel (LATERAL) */
 .painel_lateral {
     display: flex;
     width: 25vw;
-    height: 80vh;
+    height: 100%;
     flex-direction: column;
     justify-content: flex-start;
 
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(0, 0, 0);
     color: white;
 }
 
@@ -65,6 +87,7 @@ ul {
     /*! Nenhum tipo de lista */
     padding: 0;
     /*! Tirar o espaçamento */
+
 }
 
 /*! Padronizaçao do espaçamento das lista que no site remete aos usuarios */
@@ -91,10 +114,6 @@ ul {
     font-family: sans-serif;
 }
 
-/*! icones da primeira lista e mais para frente a padronizacao dos icones */
-.icon {
-    width: 40px;
-}
 
 /*? Padronizaçao do esoçamento do titulo das listas */
 .titulo_lista {
@@ -128,17 +147,143 @@ ul {
     align-items: center;
 }
 
-/* .painel_perfil {
+.painel_perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: aliceblue;
     width: 75vw;
-    height: 80vh;
-    justify-content: flex-end;
-} */
+    height: 20vh;
+}
+
+.info_perfil {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+    justify-content: space-around;
+
+    color: white;
+    font-family: Geometric-Sans;
+    background-color: #460000;
+}
+
+.agrupar_itens_infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.foto_perfil {
+    width: 12vw;
+    height: 11vh;
+
+}
+
+.infos_usuario {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+}
+
+.nome_usuario {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.data_cadastro {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.opcoes_info {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.infos_usuario {
+    list-style: none;
+    width: 50%;
+    height: 30%;
+    gap: 0;
+    padding: 0;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    color: #1d2c3a;
+    border-radius: 30cap;
+    border-color: #1d2c3a;
+}
+
+.filmes_avaliados {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filme1 {
+    display: flex;
+    background-color: #d3d3d3;
+    border: 1px solid black;
+    width: 95%;
+    gap: 2%;
+    padding: 1%
+}
+
+.icon_avaliaComp {
+    margin-top: ;
+    width: 5vw;
+}
+
+.capa_filme {
+    width: 10vw;
+}
+
+.titulo {
+    margin-left: 2%;
+    font-weight: 598;
+    font-size: 40px;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.titulo_filme {
+    font-size: 200%;
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.linha_filme1 {
+    background-color: rgb(139, 133, 133);
+    width: 18vw;
+    height: 1vh;
+    margin-bottom: 2%;
+}
+
+.linha_filme2 {
+    background-color: rgb(139, 133, 133);
+    width: 20vw;
+    height: 1vh;
+    margin-bottom: 2%;
+}
+
+.linha_filme3 {
+    background-color: rgb(139, 133, 133);
+    width: 22vw;
+    height: 1vh;
+    margin-bottom: 2%;
+}
 
 .rodape {
-    width: 100vw;
-    height: 20vh;
-    background-color: rgb(22, 22, 22);
-    
-    justify-content: flex-end;
+    background-color: black;
+    width: 100%;
+    height: 15%;
 }
