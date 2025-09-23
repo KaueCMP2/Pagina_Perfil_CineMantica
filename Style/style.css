@@ -220,7 +220,6 @@ ul {
 
 .nome_usuario {
     font-size: 180%;
-    font-weight: ;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -257,7 +256,7 @@ ul {
     text-align: center;
     padding: 4px;
 
-    background-color: rgb(198, 184, 184);
+    background-color: rgba(255, 255, 255, 0.5);
     margin-bottom: 6%;
     border-radius: 3px;
     width: 110px;
@@ -304,7 +303,6 @@ ul {
 }
 
 .icon_avaliaComp {
-    margin-top: ;
     width: 5vw;
 }
 
@@ -347,6 +345,51 @@ ul {
     width: 22vw;
     height: 1vh;
     margin-bottom: 2%;
+}
+
+.sujestao_perfil {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: ;
+    background-color: #460000;
+    color: white;
+
+    height: 35vh;
+    width: 100%;
+}
+
+
+.sujestao_usuarios {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    gap: 10%;
+}
+
+
+.texto
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: -3vh;
+}
+
+
+.txt_sujestao_perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.img_usuario_sujestao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .rodape {
