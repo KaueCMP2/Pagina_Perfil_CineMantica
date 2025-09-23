@@ -3,17 +3,20 @@
     src: url("/assets/fontes/GeometricaSans-Regular.ttf");
 }
 
-
+/*! BODY */
 body {
     display: flex;
+    /** Libera todos os elementos do site todo */
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
+    /** organiza todos os elementos dentro do body em coluna  */
+    background-color: white;
+    /** pinta o fundo de branco */
     justify-content: space-around;
     margin: 0;
     font-family: Geometric-Sans;
 }
 
-/*! Configuraçao basica do painel (SUPERIOR) */
+/*! Configuraçao basica do painel (HEADER) */
 .painel_superior {
     display: flex;
     width: 100%;
@@ -22,31 +25,44 @@ body {
     justify-content: space-between;
     background-color: rgb(0, 0, 0);
     border-bottom: 1px solid white;
-    position: relative;
 }
 
+/*! PADRONIZAR A LOGO  */
 .logo {
     width: 15vw;
 }
 
-/*! icones da primeira lista e mais para frente a padronizacao dos icones */
+/*! icones da primeira lista e padronizacao dos icones */
 .icon {
     width: 40px;
 }
 
-.direita_painel_superior {
+/*! Cofiguraçao dos icones da direita do HEADER */
+.icone_header_direita {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 65vw;
     height: 100%;
+    gap: 100px;
 }
 
+/*! Tamanho icone sininho  */
+.icon_notifica {
+    width: 40px;
+}
 
+/*! Tamanho foto perfil que esta no painel superior direito  */
+.user_img {
+    width: 55px;
+}
+
+/*! Configuraçao posicionamento da Barra de pesquisa */
 .barra_pesquisa {
     position: relative;
 }
 
+/*! configuracao do icone da barra de pesquisa */
 .icon_pesquisa {
     width: 20px;
     position: absolute;
@@ -55,30 +71,37 @@ body {
     transform: translateY(-50%);
 }
 
+/*! configuraçao da caixa de pesquisa (INPUT) */
 #caixa_pesquisa {
     border-radius: 10px;
-    width: 40vw;
+    width: 35vw;
     height: 4vh;
-    padding-left: 0.1%;
+    padding-left: 6%;
 }
 
+/*! O todo abaixo do Header e acima do Footer  */
 .conteiner {
     display: flex;
     justify-content: space-between;
-    height: 80%;
+    height: 85vh;
     width: 100%;
 }
 
 /*! Configuraçao basica do painel (LATERAL) */
 .painel_lateral {
     display: flex;
-    width: 25vw;
-    height: 100%;
+    width: 20vw;
+    height: 88vh;
     flex-direction: column;
-    justify-content: flex-start;
-
-    background-color: rgb(0, 0, 0);
+    flex-shrink: 0;
+    background-color: black;
     color: white;
+    overflow-y: auto;
+}
+
+.perfil_todo {
+    display: flex;
+    flex-direction: column;
 }
 
 /*! somente para padronizar todos os tipos de listas */
@@ -149,19 +172,21 @@ ul {
 
 .painel_perfil {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
     background-color: aliceblue;
+    overflow-y: auto;
     width: 75vw;
-    height: 20vh;
+    height: 100%;
 }
 
 .info_perfil {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 25vh;
-    justify-content: space-around;
+    height: 35vh;
+    justify-content: center;
 
     color: white;
     font-family: Geometric-Sans;
@@ -170,50 +195,92 @@ ul {
 
 .agrupar_itens_infos {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-
+    justify-content: space-between;
+    width: 50vw;
+    height: 80%;
 }
 
 .foto_perfil {
-    width: 12vw;
-    height: 11vh;
+    margin-top: 4%;
+    width: 180px;
+    height: 180px;
 
+}
+
+.esquerda {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.direita {
+    margin-top: 1%;
+}
+
+
+.nome_usuario {
+    font-size: 180%;
+    font-weight: ;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.data_cadastro {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: x-small;
+    color: #9d9d9d;
+}
+
+/*! Secao para configuracao da lista de informacoes do pefil  */
+.lista_info {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.lista_info_esquerda {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista_info_direita {
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes_info {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    list-style: none;
+    margin-top: 0;
+    text-align: center;
+    padding: 4px;
+
+    background-color: rgb(198, 184, 184);
+    margin-bottom: 6%;
+    border-radius: 3px;
+    width: 110px;
+    height: 50px;
+    
 }
 
 .infos_usuario {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    height: 80%;
-}
-
-.nome_usuario {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.data_cadastro {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.opcoes_info {
-    list-style: none;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.infos_usuario {
-    list-style: none;
     width: 50%;
+    list-style: none;
     height: 30%;
-    gap: 0;
+    gap: 22px;
     padding: 0;
 }
 
-button {
+
+.editar_perfil {
+    width: 100px;
+    height: 30px;
     background-color: rgb(255, 255, 255);
-    align-items: center;
+    align-items: baseline;
     color: #1d2c3a;
     border-radius: 30cap;
     border-color: #1d2c3a;
@@ -248,9 +315,9 @@ button {
 .titulo {
     margin-left: 2%;
     font-weight: 598;
-    font-size: 40px;
-    margin-top: 2%;
-    margin-bottom: 1%;
+    font-size: 30px;
+    margin-top: 1%;
+    margin-bottom: 0;
 }
 
 .titulo_filme {
