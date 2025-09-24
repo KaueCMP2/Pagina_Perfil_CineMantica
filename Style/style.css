@@ -11,7 +11,6 @@ body {
     /** organiza todos os elementos dentro do body em coluna  */
     background-color: white;
     /** pinta o fundo de branco */
-    justify-content: space-around;
     margin: 0;
     font-family: Geometric-Sans;
 }
@@ -37,26 +36,6 @@ body {
     width: 40px;
 }
 
-/*! Cofiguraçao dos icones da direita do HEADER */
-.icone_header_direita {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 65vw;
-    height: 100%;
-    gap: 100px;
-}
-
-/*! Tamanho icone sininho  */
-.icon_notifica {
-    width: 40px;
-}
-
-/*! Tamanho foto perfil que esta no painel superior direito  */
-.user_img {
-    width: 55px;
-}
-
 /*! Configuraçao posicionamento da Barra de pesquisa */
 .barra_pesquisa {
     position: relative;
@@ -79,6 +58,26 @@ body {
     padding-left: 6%;
 }
 
+/*! Cofiguraçao dos icones da direita do HEADER */
+.icon_header_direita {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65vw;
+    height: 100%;
+    gap: 100px;
+}
+
+/*! Tamanho icone sininho  */
+.icon_notifica {
+    width: 40px;
+}
+
+/*! Tamanho foto perfil que esta no painel superior direito  */
+.user_img {
+    width: 55px;
+}
+
 /*! O todo abaixo do Header e acima do Footer  */
 .conteiner {
     display: flex;
@@ -91,7 +90,7 @@ body {
 .painel_lateral {
     display: flex;
     width: 20vw;
-    height: 88vh;
+    height: 85vh;
     flex-direction: column;
     flex-shrink: 0;
     background-color: black;
@@ -99,7 +98,20 @@ body {
     overflow-y: auto;
 }
 
-.perfil_todo {
+.painel_perfil {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aliceblue;
+    overflow-y: auto;
+    width: 75vw;
+    /* height: 85vh; */
+}
+
+
+/*! Agrupa todos os itens do painel do perfil  */
+.todos_itens_perfil {
     display: flex;
     flex-direction: column;
 }
@@ -107,14 +119,14 @@ body {
 /*! somente para padronizar todos os tipos de listas */
 ul {
     list-style: none;
-    /*! Nenhum tipo de lista */
+    /** Nenhum tipo de lista */
     padding: 0;
-    /*! Tirar o espaçamento */
+    /** Tirar o espaçamento */
 
 }
 
 /*! Padronizaçao do espaçamento das lista que no site remete aos usuarios */
-.listas {
+.lista {
     margin: 0;
     padding: 0;
     display: flex;
@@ -170,17 +182,6 @@ ul {
     align-items: center;
 }
 
-.painel_perfil {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: aliceblue;
-    overflow-y: auto;
-    width: 75vw;
-    height: 100%;
-}
-
 .info_perfil {
     display: flex;
     align-items: center;
@@ -196,7 +197,7 @@ ul {
 .agrupar_itens_infos {
     display: flex;
     justify-content: space-between;
-    width: 50vw;
+    width: 58vw;
     height: 80%;
 }
 
@@ -261,7 +262,7 @@ ul {
     border-radius: 3px;
     width: 110px;
     height: 50px;
-    
+
 }
 
 .infos_usuario {
@@ -272,17 +273,19 @@ ul {
     height: 30%;
     gap: 22px;
     padding: 0;
+
 }
 
 
 .editar_perfil {
-    width: 100px;
-    height: 30px;
+    width: 7vw;
+    height: 4vh;
     background-color: rgb(255, 255, 255);
     align-items: baseline;
-    color: #1d2c3a;
+    color: #216db4;
     border-radius: 30cap;
-    border-color: #1d2c3a;
+    border-color: #000000;
+
 }
 
 .filmes_avaliados {
@@ -313,9 +316,9 @@ ul {
 .titulo {
     margin-left: 2%;
     font-weight: 598;
-    font-size: 30px;
-    margin-top: 1%;
-    margin-bottom: 0;
+    font-size: 40px;
+    margin-top: 2%;
+    margin-bottom: 1%;
 }
 
 .titulo_filme {
@@ -360,18 +363,9 @@ ul {
 }
 
 
-.sujestao_usuarios {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    width: 80%;
-    align-items: center;
-    gap: 10%;
-}
 
 
-.texto
-{
+.texto {
     display: flex;
     justify-content: center;
     align-self: center;
@@ -382,14 +376,33 @@ ul {
 .txt_sujestao_perfil {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
 }
+
+.sujestao_usuarios {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    gap: 10%;
+}
+
 .img_usuario_sujestao {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
+.img_seta {
+    width: 3vw;
+    filter: contrast(0%) brightness(200%);
+}
+
+.img_User {
+    width: 8vw;
 }
 
 .rodape {
