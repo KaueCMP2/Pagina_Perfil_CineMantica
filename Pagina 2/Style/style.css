@@ -1,0 +1,272 @@
+@font-face {
+    font-family: Geometric-Sans;
+    src: url("/assets/fontes/GeometricaSans-Regular.ttf");
+}
+
+* {
+    font-family: Geometric-Sans;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #150f0f;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 15vh;
+    background-color: #0c0303;
+}
+
+.itens_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.lista_opcoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    height: 100%;
+}
+
+.opcoes {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: rgb(205, 205, 205);
+    position: relative;
+    padding: 0 10px;
+    font-size: 1rem;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+/*! Cria o pseudo-elemento ::after em cada link do menu */
+.opcoes::after {
+    content: '';    /*! conteúdo vazio (só serve como linha decorativa) */
+    position: absolute;    /*! permite posicionar em relação ao link */
+    left: 0;    /*! começa alinhado à esquerda */
+    bottom: 0;    /*! fica grudado na parte inferior do link */
+    height: 2px;    /*! espessura da linha */
+    width: 0;    /*! largura inicial (invisível) */
+    color: #ffffff;
+    background-color: red;    /*! cor da linha */
+    transition: width 0.3s ease;
+    /*! animação suave do aumento da largura */
+}
+
+.opcoes:hover::after,
+.opcoes.active::after {
+    width: 100%;
+}
+
+.opcoes:hover,
+.opcoes.active {
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.caixa_pesquisa {
+    position: relative;
+    display: flex;
+    width: 40vh;
+}
+
+/* input com borda base */
+.input_label {
+    width: 100%;
+    background: transparent;
+    padding: 6px;
+    border: none;
+    border-bottom: 2px solid #d9d9d9; /* linha cinza base */
+    outline: 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* pseudo-elemento na caixa, não no input */
+.caixa_pesquisa::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;                 /* fica em cima da borda do input */
+    height: 2px;
+    width: 0;
+    background-color: red;
+    transition: width 0.5s ease;
+}
+
+.input_label:valid {
+    border-bottom-color: red;
+}
+
+/* ativa quando o input ganha foco ou hover */
+.caixa_pesquisa:hover::after,
+.caixa_pesquisa:focus-within::after {
+    width: 100%;
+}
+
+
+.input_label:focus ~ label,
+:valid ~ label {
+    transform: translateY(-16px);
+    font-size: 12px;
+}
+
+label {
+    position: absolute;
+    display: block;
+    color: #ffffff;
+    transition: width 0.2s ease;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+/*! PAINEL PERFIL!!!  */
+.painel_perfil {
+    display: flex;
+    height: 85%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+/*! PARTE DE CIMA DO PAiNEL PERFIL!!!  */
+.cima_perfil {
+    display: flex;
+    width: 80%;
+    height: 30vh;
+    background-color: rgb(69, 49, 49);
+    border-radius: 35px 35px 0 0;
+    color: white;
+    flex-direction: column;
+    position: relative;
+}
+
+.icons_cima_pp {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 1%;
+    margin:2% 2% 0 0;
+}
+
+.op_painel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 10%;
+    height: 5vh;
+    border-radius: 15px;
+    
+    font-size: 0.6rem;
+    font-weight: 700;
+    background-color: rgb(97, 44, 44);
+}
+
+.icons_lado_pp {
+    display: flex;
+    flex-direction: row;
+    align-items: self-end;
+    gap: 1%;
+    height: 20vh;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.nome_usuario {
+    font-size: 1.4rem;
+    font-weight: 590;
+    
+    background-color: rgba(24, 10, 10, 0.4);
+    border-radius: 5px 5px 5px 0;
+}
+
+.classe {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    width: 30%;
+
+    background-color: rgba(24, 10, 10, 0.4);
+    border-radius: 0 0 5px 5px;
+}
+
+.foto_perfil {
+    width: 10%;
+}
+
+/*! PARTE BAIXO PAINEL PERFIL  */
+.baixo_perfil {
+    display: flex;
+    width: 80%;
+    height: 8vh;
+    border-radius: 0 0 35px 35px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(59, 27, 27);
+}
+
+.op_baixo_pp {
+    display: flex;
+    align-items: center;
+    width: 30%;
+
+    gap: 10%;
+    align-items: start;
+}
+
+.info_baixo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 1%;
+    width: 80%;
+    height: 60vh;
+    gap: 1%;
+}
+
+.side_bar_left {
+    display: flex;
+    width: 30%;
+    height: 60vh;
+    align-items: start;
+
+    background-color: #0c0303;
+    border-radius: 35px;
+}
+
+.side_bar_right {
+    display: flex;
+    width: 68%;
+    height: 60vh;
+    
+    background-color: #0c0303;
+    border-radius: 35px;
+}
