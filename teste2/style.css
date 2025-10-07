@@ -1,0 +1,40 @@
+.hamburger {
+    /* display: block; */
+    border: none;
+    background: none;
+    border-top: 3.3px solid #fff;
+    cursor: pointer;
+    padding: 0px;
+    position: relative;
+}
+
+.hamburger::after,
+.hamburger::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.active-side {
+    display: none;
+    transition: 0.3s ease;
+}
+
+.active-button {
+    border-top-color: transparent;
+    margin-bottom: 20px;
+}
+
+.active-button::after {
+    transform: rotate(135deg);
+}
+
+.active-button::before {
+    transform: rotate(-135deg);
+    top: 8px;
+}
